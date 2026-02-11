@@ -1,4 +1,5 @@
 import {Composition} from 'remotion';
+import {MyAnimation as CountdownTimerAnimation} from '../skills/remotion/rules/assets/animations-countdown-timer';
 import {MyAnimation as BarChartAnimation} from '../skills/remotion/rules/assets/charts-bar-chart';
 import {MyAnimation as TypewriterAnimation} from '../skills/remotion/rules/assets/text-animations-typewriter';
 import {MyAnimation as WordHighlightAnimation} from '../skills/remotion/rules/assets/text-animations-word-highlight';
@@ -6,6 +7,14 @@ import {MyAnimation as WordHighlightAnimation} from '../skills/remotion/rules/as
 export const RemotionRoot = () => {
 	return (
 		<>
+			<Composition
+				id="CountdownTimer"
+				component={CountdownTimerAnimation}
+				durationInFrames={150}
+				fps={30}
+				width={1080}
+				height={1080}
+			/>
 			<Composition
 				id="BarChart"
 				component={BarChartAnimation}
